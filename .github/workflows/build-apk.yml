@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+              - name: Install TypeScript
+        run: npm install --save-dev typescript
+
       - name: Create Android project
         run: npx cap add android
 
