@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="MMC PONSEL - Jual Beli HP & Service">
+<link rel="manifest" href="manifest.json">
+<title>MMC PONSEL — Jual Beli HP & Service</title>
+<style>
+:root{--bg:#0b1220;--card:#111b2d;--card2:#162238;--text:#f8fafc;--muted:#94a3b8;--yellow:#facc15;--pink:#ff2d8b;--green:#22c55e;--red:#ef4444;--line:#26344b}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#07101d,#0d1728);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{max-width:1100px;margin:auto;min-height:100vh;padding-bottom:82px}
+header{position:sticky;top:0;z-index:10;background:rgba(7,16,29,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:24px;letter-spacing:-1px}.logo b{color:var(--yellow)}.tag{font-size:11px;color:var(--muted);margin-top:2px}
+.iconbtn{background:var(--card2);color:white;border:1px solid var(--line);border-radius:12px;padding:9px 11px}
+main{padding:18px}.page{display:none}.page.active{display:block}
+.search{display:flex;gap:8px;background:white;border-radius:14px;padding:6px;margin-bottom:16px}.search input{flex:1;border:0;outline:0;padding:9px;background:transparent;color:#111}
+.hero{background:linear-gradient(120deg,#17253b,#0f172a);border:1px solid #31415c;border-radius:20px;padding:20px;position:relative;overflow:hidden}
+.hero:after{content:"📱";position:absolute;right:25px;bottom:-12px;font-size:90px;opacity:.18}.hero h1{margin:0 0 7px;font-size:27px}.hero p{color:#cbd5e1;margin:0 0 15px;max-width:600px}
+.btn{border-radius:12px;padding:11px 15px;font-weight:800}.primary{background:var(--yellow);color:#111827}.secondary{background:var(--card2);color:white;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.cat{padding:15px 8px;background:var(--card);border:1px solid var(--line);border-radius:16px;text-align:center}.cat .ico{font-size:27px}.cat strong{display:block;font-size:13px;margin-top:7px}
+.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:20px 0 10px}.sectionhead h2{font-size:18px;margin:0}.muted{color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}.pic{height:145px;background:linear-gradient(135deg,#24324a,#0f172a);display:flex;align-items:center;justify-content:center;font-size:70px}.pbody{padding:12px}.badge{font-size:10px;background:#263650;color:#dbeafe;padding:4px 7px;border-radius:99px;display:inline-block}.product h3{font-size:14px;margin:9px 0 5px}.price{font-weight:900;color:var(--yellow);font-size:16px}.small{font-size:11px;color:var(--muted)}
+.bottom{position:fixed;z-index:20;bottom:0;left:0;right:0;background:rgba(10,18,32,.96);border-top:1px solid var(--line);display:flex;justify-content:center}.nav{width:min(700px,100%);display:grid;grid-template-columns:repeat(5,1fr)}.nav button{background:none;color:var(--muted);padding:10px 4px 8px;font-size:11px}.nav button.active{color:var(--yellow);font-weight:800}.nav span{display:block;font-size:21px;margin-bottom:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}.form{display:grid;gap:10px}.field{background:#0c1627;color:white;border:1px solid #31415c;border-radius:11px;padding:12px;width:100%;outline:none}.row{display:flex;gap:10px}.row>*{flex:1}.login{max-width:430px;margin:35px auto}.login .brand{text-align:center;font-size:36px;font-weight:950;margin-bottom:6px}.social{display:grid;gap:9px;margin-top:10px}.google{background:white;color:#111}.facebook{background:#1877f2;color:white}.divider{display:flex;align-items:center;gap:10px;color:var(--muted);margin:13px 0}.divider:before,.divider:after{content:"";height:1px;background:var(--line);flex:1}
+.service{border:1px solid #6b1743;background:linear-gradient(135deg,#20132a,#111827);}.service h2{color:#ff5aa7}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:12px 0}.check{padding:12px;text-align:center;border:1px solid var(--line);border-radius:12px;background:#0d1728}.check.sel{border-color:var(--pink);background:#32132a}.empty{text-align:center;padding:30px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#f8fafc;color:#111827;padding:11px 16px;border-radius:12px;font-weight:700;display:none;z-index:50;box-shadow:0 8px 30px #0008}
+@media(max-width:750px){.grid{grid-template-columns:repeat(4,1fr);gap:7px}.products{grid-template-columns:repeat(2,1fr)}.pic{height:125px}.hero h1{font-size:23px}.checks{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.bottom{position:fixed;left:50%;right:auto;transform:translateX(-50%);width:100%;max-width:1100px;border-radius:18px 18px 0 0}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div><div class="logo">MMC <b>PONSEL</b></div><div class="tag">Jual Beli HP • Service</div></div><button class="iconbtn" onclick="showPage('profil')">👤</button></header>
+<main>
+<section id="home" class="page active">
+<div class="search"><span>🔎</span><input id="search" placeholder="Cari HP, merek, atau layanan..." oninput="renderProducts()"></div>
+<div class="hero"><h1>Jual Beli HP & Service</h1><p>HP Baru • Bekas • Rusak • Service HP Miss Cell. Mudah, aman, dan praktis.</p><button class="btn primary" onclick="showPage('beli')">Lihat Produk</button></div>
+<div class="grid">
+<div class="cat" onclick="filterCat('baru')"><div class="ico">🆕</div><strong>HP Baru</strong></div>
+<div class="cat" onclick="filterCat('bekas')"><div class="ico">♻️</div><strong>HP Bekas</strong></div>
+<div class="cat" onclick="filterCat('rusak')"><div class="ico">📱</div><strong>HP Rusak</strong></div>
+<div class="cat" onclick="showPage('service')"><div class="ico">🔧</div><strong>Service</strong></div>
+</div>
+<div class="sectionhead"><h2>Produk Terbaru</h2><button class="iconbtn" onclick="showPage('beli')">Lihat semua</button></div>
+<div id="homeProducts" class="products"></div>
+</section>
+
+<section id="beli" class="page"><div class="sectionhead"><h2>🛒 Beli HP</h2><span class="muted">Pilih produk</span></div><div class="row"><select id="catFilter" class="field" onchange="renderProducts()"><option value="">Semua kondisi</option><option value="baru">Baru</option><option value="bekas">Bekas</option><option value="rusak">Rusak</option></select><select id="brandFilter" class="field" onchange="renderProducts()"><option value="">Semua merek</option><option>Apple</option><option>Samsung</option><option>Xiaomi</option><option>OPPO</option></select></div><div id="products" class="products" style="margin-top:14px"></div></section>
+
+<section id="jual" class="page"><div class="sectionhead"><h2>💰 Jual HP</h2></div><div class="card"><p class="muted">Pasang HP yang ingin Anda jual.</p><form class="form" onsubmit="addProduct(event)"><input id="newName" class="field" placeholder="Nama HP" required><div class="row"><select id="newBrand" class="field"><option>Apple</option><option>Samsung</option><option>Xiaomi</option><option>OPPO</option></select><select id="newCond" class="field"><option value="bekas">Bekas</option><option value="baru">Baru</option><option value="rusak">Rusak</option></select></div><input id="newPrice" class="field" type="number" min="0" placeholder="Harga (Rp)" required><textarea id="newDesc" class="field" placeholder="Deskripsi / kondisi HP"></textarea><button class="btn primary">Pasang Iklan</button></form></div></section>
+
+<section id="service" class="page"><div class="card service"><h2>💗 Miss Cell</h2><h3>Service HP Profesional</h3><p class="muted">Pilih jenis kerusakan HP Anda, lalu kirim permintaan service.</p><div class="checks" id="checks"></div><input id="serviceName" class="field" placeholder="Nama pelanggan" style="margin-bottom:9px"><input id="servicePhone" class="field" placeholder="Nomor HP" style="margin-bottom:9px"><textarea id="serviceNote" class="field" placeholder="Keterangan tambahan"></textarea><button class="btn" style="background:var(--pink);color:white;width:100%;margin-top:10px" onclick="bookService()">Pesan Service Sekarang</button></div></section>
+
+<section id="cart" class="page"><div class="sectionhead"><h2>🛍️ Keranjang</h2><button class="iconbtn" onclick="clearCart()">Kosongkan</button></div><div id="cartItems"></div></section>
+
+<section id="transaksi" class="page"><div class="sectionhead"><h2>📋 Transaksi Saya</h2></div><div id="transactions"></div></section>
+
+<section id="profil" class="page"><div class="card"><h2>👤 Profil</h2><p id="profileText" class="muted">Belum login.</p><div class="form"><input id="loginName" class="field" placeholder="Nama"><input id="loginEmail" class="field" placeholder="Email"><button class="btn primary" onclick="saveProfile()">Simpan Profil</button></div></div>
+<div class="card"><h3>🔐 Login</h3><p class="muted">Tampilan login sosial sudah disiapkan. Untuk login Google/Facebook sungguhan, hubungkan OAuth saat aplikasi dipublikasikan.</p><div class="social"><button class="btn google" onclick="demoLogin('Google')">G&nbsp; Login dengan Google</button><button class="btn facebook" onclick="demoLogin('Facebook')">f&nbsp; Login dengan Facebook</button></div></div></section>
+</main>
+<div class="bottom"><nav class="nav"><button class="active" data-page="home" onclick="showPage('home')"><span>🏠</span>Beranda</button><button data-page="jual" onclick="showPage('jual')"><span>💰</span>Jual</button><button data-page="beli" onclick="showPage('beli')"><span>🛒</span>Beli</button><button data-page="service" onclick="showPage('service')"><span>🔧</span>Service</button><button data-page="profil" onclick="showPage('profil')"><span>👤</span>Profil</button></nav></div>
+<div id="toast" class="toast"></div>
+<script>
+const defaultProducts=[
+{id:1,name:"iPhone 13 128GB",brand:"Apple",cond:"bekas",price:6500000,emoji:"📱"},
+{id:2,name:"Samsung Galaxy S21",brand:"Samsung",cond:"bekas",price:3900000,emoji:"📱"},
+{id:3,name:"Xiaomi Redmi Note 10",brand:"Xiaomi",cond:"rusak",price:1750000,emoji:"📱"},
+{id:4,name:"OPPO Reno 6",brand:"OPPO",cond:"baru",price:2850000,emoji:"📱"},
+{id:5,name:"iPhone 15",brand:"Apple",cond:"baru",price:9500000,emoji:"📱"},
+{id:6,name:"Samsung A55 5G",brand:"Samsung",cond:"baru",price:5600000,emoji:"📱"}];
+let products=JSON.parse(localStorage.getItem('mmc_products')||'null')||defaultProducts;
+let cart=JSON.parse(localStorage.getItem('mmc_cart')||'[]');
+let tx=JSON.parse(localStorage.getItem('mmc_tx')||'[]');
+let selectedService="";
+const services=["Layar Pecah","Baterai","Tidak Bisa Dinyalakan","Kamera","Water Damage","Software","Lainnya"];
+const rupiah=n=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n);
+function save(){localStorage.setItem('mmc_products',JSON.stringify(products));localStorage.setItem('mmc_cart',JSON.stringify(cart));localStorage.setItem('mmc_tx',JSON.stringify(tx))}
+function toast(s){const t=document.getElementById('toast');t.textContent=s;t.style.display='block';clearTimeout(window.tt);window.tt=setTimeout(()=>t.style.display='none',2200)}
+function showPage(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===id));if(id==='cart')renderCart();if(id==='transaksi')renderTx();if(id==='profil')loadProfile();window.scrollTo({top:0,behavior:'smooth'})}
+function card(p){return `<div class="product"><div class="pic">${p.emoji||'📱'}</div><div class="pbody"><span class="badge">${p.cond.toUpperCase()}</span><h3>${p.name}</h3><div class="price">${rupiah(p.price)}</div><div class="small">${p.brand} • Siap diproses</div><button class="btn primary" style="width:100%;margin-top:9px" onclick="addCart(${p.id})">Tambah ke Keranjang</button></div></div>`}
+function renderProducts(){let q=(document.getElementById('search')?.value||'').toLowerCase();let c=document.getElementById('catFilter')?.value||'';let b=document.getElementById('brandFilter')?.value||'';let arr=products.filter(p=>(!q||p.name.toLowerCase().includes(q)||p.brand.toLowerCase().includes(q))&&(!c||p.cond===c)&&(!b||p.brand===b));document.getElementById('products').innerHTML=arr.map(card).join('')||'<div class="empty">Produk tidak ditemukan.</div>';document.getElementById('homeProducts').innerHTML=products.slice(0,4).map(card).join('')}
+function filterCat(c){document.getElementById('catFilter').value=c;showPage('beli');renderProducts()}
+function addCart(id){let p=products.find(x=>x.id===id);cart.push(p);save();toast('Ditambahkan ke keranjang');}
+function renderCart(){let el=document.getElementById('cartItems');if(!cart.length){el.innerHTML='<div class="empty">Keranjang masih kosong.</div>';return}let total=cart.reduce((s,p)=>s+p.price,0);el.innerHTML=cart.map((p,i)=>`<div class="card"><div class="row"><div><b>${p.name}</b><div class="small">${p.brand} • ${p.cond}</div></div><b class="price">${rupiah(p.price)}</b></div><button class="iconbtn" style="margin-top:10px" onclick="removeCart(${i})">Hapus</button></div>`).join('')+`<div class="card"><div class="row"><b>Total</b><b class="price">${rupiah(total)}</b></div><button class="btn primary" style="width:100%;margin-top:12px" onclick="checkout()">Checkout</button></div>`}
+function removeCart(i){cart.splice(i,1);save();renderCart();toast('Produk dihapus')}
+function clearCart(){cart=[];save();renderCart()}
+function checkout(){if(!cart.length)return;tx.unshift({type:'Beli HP',items:cart.map(x=>x.name),total:cart.reduce((s,p)=>s+p.price,0),status:'Menunggu pembayaran',date:new Date().toLocaleString('id-ID')});cart=[];save();toast('Pesanan dibuat');showPage('transaksi')}
+function renderTx(){let e=document.getElementById('transactions');e.innerHTML=tx.length?tx.map(t=>`<div class="card"><b>${t.type}</b><div class="small">${t.date}</div><p>${t.items?.join(', ')||t.service||''}</p><b class="price">${t.total?rupiah(t.total):'Service'}</b><span class="badge" style="float:right">${t.status}</span></div>`).join(''):'<div class="empty">Belum ada transaksi.</div>'}
+function addProduct(e){e.preventDefault();let p={id:Date.now(),name:document.getElementById('newName').value,brand:document.getElementById('newBrand').value,cond:document.getElementById('newCond').value,price:+document.getElementById('newPrice').value,emoji:'📱'};products.unshift(p);save();e.target.reset();toast('Iklan berhasil dipasang');showPage('beli');renderProducts()}
+function initServices(){document.getElementById('checks').innerHTML=services.map(s=>`<div class="check" onclick="pickService(this,'${s}')">🔧<br><small>${s}</small></div>`).join('')}
+function pickService(el,s){document.querySelectorAll('.check').forEach(x=>x.classList.remove('sel'));el.classList.add('sel');selectedService=s}
+function bookService(){if(!selectedService||!document.getElementById('serviceName').value){toast('Pilih kerusakan dan isi nama');return}tx.unshift({type:'Service Miss Cell',service:selectedService,status:'Menunggu konfirmasi',date:new Date().toLocaleString('id-ID')});save();toast('Permintaan service terkirim');showPage('transaksi')}
+function saveProfile(){let n=document.getElementById('loginName').value,e=document.getElementById('loginEmail').value;localStorage.setItem('mmc_profile',JSON.stringify({n,e}));loadProfile();toast('Profil tersimpan')}
+function loadProfile(){let p=JSON.parse(localStorage.getItem('mmc_profile')||'null');document.getElementById('profileText').textContent=p?.n?`Masuk sebagai ${p.n} • ${p.e||'email belum diisi'}`:'Belum login';if(p){document.getElementById('loginName').value=p.n||'';document.getElementById('loginEmail').value=p.e||''}}
+function demoLogin(provider){let p={n:'Pengguna MMC PONSEL',e:'login@'+provider.toLowerCase()+'.demo'};localStorage.setItem('mmc_profile',JSON.stringify(p));loadProfile();toast('Mode demo '+provider+' aktif')}
+initServices();renderProducts();loadProfile();
+</script>
+<script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});</script>
+</body></html>
