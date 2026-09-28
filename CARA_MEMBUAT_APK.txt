@@ -1,0 +1,24 @@
+MMC PONSEL — CARA PASANG DI HP ANDROID
+
+Penting: paket ini belum berupa APK. APK perlu dikompilasi dengan Android SDK/Android Studio atau layanan build.
+
+Cara termudah:
+1. Ekstrak ZIP ini di komputer.
+2. Install Android Studio terbaru.
+3. Buka folder proyek MMC PONSEL.
+4. Pastikan Android SDK terpasang.
+5. Jalankan:
+   npm install
+   npx cap sync android
+   npx cap open android
+6. Di Android Studio pilih Build > Build APK(s).
+7. APK debug akan berada di:
+   android/app/build/outputs/apk/debug/app-debug.apk
+
+Untuk pengguna HP saja:
+- HP Android tidak dapat secara langsung mengompilasi proyek Capacitor menjadi APK tanpa toolchain build.
+- Anda perlu komputer/cloud build untuk langkah kompilasi.
+
+Catatan keamanan:
+- Jangan masukkan password akun, service_role key, atau secret ke chat.
+- Project URL dan publishable/anon key Supabase boleh digunakan di aplikasi frontend bila RLS sudah dikonfigurasi dengan benar.
